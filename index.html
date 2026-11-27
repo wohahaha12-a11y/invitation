@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>강지석 · 김가원 결혼식에 초대합니다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Gowun+Dodum&display=swap">
+<style>
+:root{
+  --bg:#F5EBE6; --surface:#FBF5F1; --ink:#3A2A2E; --muted:#7A6469; --line:#D9C3BC;
+  --wine:#8A4651; --gold:#B58A5B; --sage:#8E9C86;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#241A1D; --surface:#2F2327; --ink:#F3E4DD; --muted:#C2A9A4; --line:#4B3A3F;
+    --wine:#E3A2AB; --gold:#D8AE80;
+  }
+}
+:root[data-theme="dark"]{ --bg:#241A1D; --surface:#2F2327; --ink:#F3E4DD; --muted:#C2A9A4; --line:#4B3A3F; --wine:#E3A2AB; --gold:#D8AE80; }
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:17px;line-height:1.85;overflow-x:hidden;word-break:keep-all;overflow-wrap:break-word;text-align:center}
+h1,h2,h3{font-family:"Nanum Myeongjo","Batang","AppleMyungjo",serif;font-weight:400;margin:0;line-height:1.35}
+main{max-width:600px;margin:0 auto;padding:0 24px 72px}
+section{margin-top:72px}
+h2{font-size:22px;color:var(--wine);letter-spacing:.12em;margin-bottom:28px}
+h2::after{content:"";display:block;width:1px;height:36px;background:var(--gold);margin:16px auto 0}
+
+/* hero */
+.hero{padding:88px 0 8px}
+.hero .names{font-size:clamp(40px,12vw,68px);font-weight:400;letter-spacing:.06em;animation:rise 1.4s ease-out both}
+.hero .amp{color:var(--gold);font-style:italic;padding:0 .12em}
+.hero .lead{margin:22px 0 30px;color:var(--muted);letter-spacing:.04em;animation:rise 1.4s .25s ease-out both}
+.hero .date{font-family:"Nanum Myeongjo",serif;font-size:20px;letter-spacing:.1em;display:inline-block;padding:10px 28px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);animation:rise 1.4s .5s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* photo */
+.photo+.date{margin-top:40px}
+.venue{font-family:"Nanum Myeongjo",serif;font-size:20px;letter-spacing:.08em;margin-top:18px}
+.photo{margin:48px auto 0;width:min(260px,72%);animation:rise 1.4s .75s ease-out both}
+.photo svg{display:block;width:100%;height:auto}
+
+/* invitation */
+.invite h2{font-style:italic;font-size:17px;letter-spacing:.4em;color:var(--gold);margin-bottom:24px}
+.invite h2::after{display:none}
+.invite p{margin:0;line-height:2.15;text-wrap:balance}
+.invite p+p{margin-top:18px}
+
+/* couple */
+.couple{font-family:"Nanum Myeongjo",serif;font-size:18px;letter-spacing:.1em;margin-bottom:30px;animation:rise 1.4s ease-out both}
+.couple span{color:var(--gold);margin-right:.5em}
+.couple i{font-style:normal;color:var(--line);margin:0 1em}
+
+/* family */
+.family p{margin:0;font-family:"Nanum Myeongjo",serif;font-size:18px;letter-spacing:.04em;line-height:2.2}
+.family .parents{color:var(--muted)}
+.family b{font-weight:700;letter-spacing:.1em;margin-left:.3em;color:var(--ink)}
+.family p+p{margin-top:6px}
+
+/* when */
+.when .big{font-family:"Nanum Myeongjo",serif;font-size:clamp(26px,7vw,34px);letter-spacing:.04em}
+.when .time{color:var(--muted);margin-top:4px;letter-spacing:.06em}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;max-width:320px;margin:28px auto 0;font-size:15px}
+.cal b{font-weight:400;color:var(--muted);font-size:13px;padding-bottom:6px}
+.cal span{aspect-ratio:1;display:grid;place-items:center;border-radius:50%;color:var(--muted)}
+.cal .sun{color:var(--wine)}
+.cal .day{background:var(--wine);color:#FFF8F4;font-family:"Nanum Myeongjo",serif;font-weight:700;font-size:17px;box-shadow:0 0 0 4px var(--bg),0 0 0 5px var(--gold)}
+
+/* gallery */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tile{aspect-ratio:1/1;margin:0;display:grid;place-items:center;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--line);overflow:hidden}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile .ph{width:30px;height:30px}
+.tile.big .ph{width:44px;height:44px}
+
+/* where */
+.where h3{font-size:30px;letter-spacing:.06em}
+.where .addr{margin:8px 0 26px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{font-size:16px;text-decoration:none;color:var(--ink);border:1px solid var(--gold);border-radius:999px;padding:9px 26px;transition:background .2s,color .2s}
+.btn:hover{background:var(--wine);border-color:var(--wine);color:#FFF8F4}
+.btn:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+
+/* map */
+.map{margin:0 auto 26px;max-width:480px;aspect-ratio:4/3;display:grid;place-content:center;justify-items:center;gap:6px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--line);overflow:hidden}
+.map img{width:100%;height:100%;object-fit:cover;display:block}
+.map figcaption{font-size:14px;color:var(--muted)}
+
+/* gift */
+.gift .note{margin:0 auto 28px;color:var(--muted);text-wrap:balance}
+.gift details{max-width:420px;margin:0 auto 14px;border:1px solid var(--gold);border-radius:14px;text-align:center}
+.gift summary{list-style:none;cursor:pointer;padding:14px 20px;font-family:"Nanum Myeongjo",serif;font-size:18px;letter-spacing:.06em}
+.gift summary::-webkit-details-marker{display:none}
+.gift summary::after{content:"+";color:var(--gold);margin-left:.6em}
+.gift details[open] summary::after{content:"\2212"}
+.gift summary:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:14px}
+.gift ul{list-style:none;margin:0;padding:4px 20px 18px}
+.gift li{padding:12px 0;border-top:1px solid var(--line)}
+.gift .who{display:block;color:var(--muted);font-size:15px}
+.gift .acct{display:block;font-size:17px;letter-spacing:.03em}
+
+footer{margin-top:80px;padding-top:36px;border-top:1px solid var(--line)}
+footer .msg{font-family:"Nanum Myeongjo",serif;font-size:19px;text-wrap:balance}
+footer p{margin:14px 0 0;color:var(--muted);letter-spacing:.08em}
+@media (prefers-reduced-motion: reduce){.hero .names,.hero .lead,.hero .date,.photo,.couple{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1 class="couple"><span>신랑</span> 강지석<i>/</i><span>신부</span> 김가원</h1>
+    <figure class="photo" style="margin-left:auto;margin-right:auto">
+      <svg viewBox="0 0 240 300" role="img" aria-label="손을 잡고 서 있는 두 사람의 일러스트">
+        <defs>
+          <clipPath id="arch"><path d="M0 300V120A120 120 0 0 1 240 120V300Z"/></clipPath>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2D5CC"/><stop offset="1" stop-color="#F9EADB"/></linearGradient>
+        </defs>
+        <g clip-path="url(#arch)">
+          <rect width="240" height="300" fill="url(#sky)"/>
+          <circle cx="120" cy="92" r="36" fill="#EBC9A0" opacity=".75"/>
+          <ellipse cx="120" cy="306" rx="190" ry="64" fill="#8E9C86"/>
+          <path d="M95 172c-14 0-18 12-18 26v62h36v-62c0-14-4-26-18-26z" fill="#3A2A2E"/>
+          <circle cx="95" cy="152" r="16" fill="#E7C3AC"/>
+          <path d="M79 148c2-16 30-20 32 0-8-8-24-8-32 0z" fill="#3A2A2E"/>
+          <path d="M146 174c-12 14-26 50-34 90h68c-8-40-22-76-34-90z" fill="#FBF5F1"/>
+          <circle cx="146" cy="156" r="15" fill="#E7C3AC"/>
+          <path d="M130 152c0-18 32-20 32 0 0 14 4 26 2 36-4-12-6-20-18-24-10 0-16 6-16-12z" fill="#6B3F3A"/>
+          <path d="M112 204q12 12 24 2" stroke="#E7C3AC" stroke-width="7" stroke-linecap="round" fill="none"/>
+        </g>
+        <path d="M2 300V120A118 118 0 0 1 238 120V300" fill="none" stroke="#B58A5B" stroke-width="2"/>
+      </svg>
+    </figure>
+    <div class="date">2026. 9. 20. 일요일 오전 11:00</div>
+    <div class="venue">제주퍼시픽호텔</div>
+  </header>
+
+  <section class="invite" aria-labelledby="invite">
+    <h2 id="invite">INVITATION</h2>
+    <p>서로 다른 길을 걸어온 두 사람이<br>이제 같은 길을 함께 걸어가려 합니다.</p>
+    <p>소중한 분들을 모시고 그 첫걸음을 나누고 싶습니다.<br>오셔서 따뜻한 마음으로 축복해 주시면 감사하겠습니다.</p>
+  </section>
+
+  <section class="family" aria-label="양가 부모님">
+    <p><span class="parents">강동완 · 조영해의 차남</span><b>강지석</b></p>
+    <p><span class="parents">김진한 · 신영숙의 장녀</span><b>김가원</b></p>
+  </section>
+
+  <section class="when" aria-labelledby="when">
+    <h2 id="when">예식 일정</h2>
+    <div class="big">2026년 9월 20일 일요일</div>
+    <div class="time">오전 11:00</div>
+    <div class="cal" id="cal" role="img" aria-label="2026년 9월 달력, 20일 일요일 오전 11시에 표시"></div>
+  </section>
+
+  <section class="gallery" aria-labelledby="gallery">
+    <h2 id="gallery">갤러리</h2>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="heart" viewBox="0 0 24 24"><path d="M12 20.5s-8-4.9-8-10.6C4 7.2 6 5.5 8.2 5.5c1.6 0 2.8.9 3.8 2.3 1-1.4 2.2-2.3 3.8-2.3C18 5.5 20 7.2 20 9.9c0 5.7-8 10.6-8 10.6z" fill="currentColor"/></symbol></svg>
+    <div class="grid">
+      <figure class="tile big"><svg class="ph" aria-hidden="true"><use href="#heart"/></svg></figure>
+      <figure class="tile"><svg class="ph" aria-hidden="true"><use href="#heart"/></svg></figure>
+      <figure class="tile"><svg class="ph" aria-hidden="true"><use href="#heart"/></svg></figure>
+      <figure class="tile"><svg class="ph" aria-hidden="true"><use href="#heart"/></svg></figure>
+      <figure class="tile"><svg class="ph" aria-hidden="true"><use href="#heart"/></svg></figure>
+      <figure class="tile"><svg class="ph" aria-hidden="true"><use href="#heart"/></svg></figure>
+    </div>
+  </section>
+
+  <section class="where" aria-labelledby="where">
+    <h2 id="where">예식 장소</h2>
+    <h3>제주퍼시픽호텔</h3>
+    <p class="addr">제주특별자치도 제주시 서사로 20</p>
+    <figure class="map">
+      <svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a7 7 0 0 0-7 7c0 5 7 12 7 12s7-7 7-12a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+      <figcaption>약도</figcaption>
+    </figure>
+    <div class="btns">
+      <a class="btn" href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%ED%8D%BC%EC%8B%9C%ED%94%BD%ED%98%B8%ED%85%94" target="_blank" rel="noopener">네이버 지도</a>
+      <a class="btn" href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%ED%8D%BC%EC%8B%9C%ED%94%BD%ED%98%B8%ED%85%94" target="_blank" rel="noopener">카카오맵</a>
+    </div>
+  </section>
+
+  <section class="gift" aria-labelledby="gift">
+    <h2 id="gift">마음 전하실 곳</h2>
+    <p class="note">참석이 어려우신 분들을 위해 계좌번호를 안내드립니다.<br>보내주신 따뜻한 마음은 소중히 간직하겠습니다.</p>
+    <details>
+      <summary>신랑측 계좌번호</summary>
+      <ul>
+        <li><span class="who">신랑 강지석</span><span class="acct">은행 · 계좌번호 입력 예정</span></li>
+        <li><span class="who">아버지 강동완</span><span class="acct">은행 · 계좌번호 입력 예정</span></li>
+        <li><span class="who">어머니 조영해</span><span class="acct">은행 · 계좌번호 입력 예정</span></li>
+      </ul>
+    </details>
+    <details>
+      <summary>신부측 계좌번호</summary>
+      <ul>
+        <li><span class="who">신부 김가원</span><span class="acct">은행 · 계좌번호 입력 예정</span></li>
+        <li><span class="who">아버지 김진한</span><span class="acct">은행 · 계좌번호 입력 예정</span></li>
+        <li><span class="who">어머니 신영숙</span><span class="acct">은행 · 계좌번호 입력 예정</span></li>
+      </ul>
+    </details>
+  </section>
+
+  <footer>
+    <div class="msg">귀한 걸음으로 자리를 빛내 주시면 감사하겠습니다</div>
+    <p>강지석 · 김가원 올림</p>
+  </footer>
+</main>
+<script>
+(function(){
+  var el=document.getElementById('cal'),h='';
+  ['일','월','화','수','목','금','토'].forEach(function(d,i){h+='<b'+(i===0?' class="sun"':'')+'>'+d+'</b>';});
+  for(var i=0;i<2;i++)h+='<span></span>';
+  for(var d=1;d<=30;d++){
+    var wd=(d+1)%7, cls=d===20?'day':(wd===0?'sun':'');
+    h+='<span'+(cls?' class="'+cls+'"':'')+'>'+d+'</span>';
+  }
+  el.innerHTML=h;
+})();
+</script>
+</body>
+</html>
